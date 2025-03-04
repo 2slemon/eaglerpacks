@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Listings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .category {
+            display: none;
+            margin-top: 20px;
+        }
+        .pack-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .pack-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            width: 250px;
+            text-align: center;
+        }
+        .pack-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .pack-card h3 {
+            margin: 10px 0 5px;
+        }
+        .pack-card a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .pack-card a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <script>
+        function showCategory() {
+            var selectedCategory = document.getElementById("categorySelect").value;
+            var categories = document.getElementsByClassName("category");
+            for (var i = 0; i < categories.length; i++) {
+                categories[i].style.display = "none";
+            }
+            if (selectedCategory) {
+                document.getElementById(selectedCategory).style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Available Packs</h1>
+    
+    <label for="categorySelect">Choose a category:</label>
+    <select id="categorySelect" onchange="showCategory()">
+        <option value="">-- Select a category --</option>
+        <option value="CrystalPVP">CrystalPVP</option>
+        <option value="Sword">Sword</option>
+        <option value="Realistic">Realistic</option>
+        <option value="Overlays">Overlays</option>
+        <option value="RodPVP">RodPVP</option>
+    </select>
+    
+    <div id="CrystalPVP" class="category">
+        <h2>CrystalPVP</h2>
+        <div class="pack-container">
+            <div class="pack-card">
+                <img src="crystal1.jpg" alt="CrystalPVP Pack 1">
+                <h3>Crystal Pack 1</h3>
+                <p>By Creator 1</p>
+                <a href="https://www.mediafire.com/file/crystal1" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Sword" class="category">
+        <h2>Sword</h2>
+        <div class="pack-container">
+            <div class="pack-card">
+                <img src="sword1.jpg" alt="Sword Pack 1">
+                <h3>Sword Pack 1</h3>
+                <p>By Creator 2</p>
+                <a href="https://www.mediafire.com/file/sword1" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Realistic" class="category">
+        <h2>Realistic</h2>
+        <div class="pack-container">
+            <div class="pack-card">
+                <img src="realistic1.jpg" alt="Realistic Pack 1">
+                <h3>Realistic Pack 1</h3>
+                <p>By Creator 3</p>
+                <a href="https://www.mediafire.com/file/realistic1" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Overlays" class="category">
+        <h2>Overlays</h2>
+        <div class="pack-container">
+            <div class="pack-card">
+                <img src="overlay1.jpg" alt="Overlay Pack 1">
+                <h3>Overlay Pack 1</h3>
+                <p>By Creator 4</p>
+                <a href="https://www.mediafire.com/file/overlay1" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="RodPVP" class="category">
+        <h2>RodPVP</h2>
+        <div class="pack-container">
+            <div class="pack-card">
+                <img src="rodpvp1.jpg" alt="RodPVP Pack 1">
+                <h3>RodPVP Pack 1</h3>
+                <p>By Creator 5</p>
+                <a href="https://www.mediafire.com/file/rodpvp1" target="_blank">Download</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
